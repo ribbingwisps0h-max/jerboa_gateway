@@ -34,7 +34,7 @@ int main() {
     memset(&socket_address, 0, sizeof(socket_address));
     socket_address.sll_ifindex = if_nametoindex("eth4");
     socket_address.sll_halen = ETH_ALEN;
-    uint8_t mac_macbook[] = {0x26, 0xA6, 0x26, 0x24, 0xAC, 0x76};
+    uint8_t mac_macbook[] = {0xAA, 0xAB, 0xBB, 0xCC, 0xC7, 0xFF};
     memcpy(socket_address.sll_addr, mac_macbook, ETH_ALEN);
 
     printf("🚀 Jerboa Gateway запущен: eth0(UDP:5000) -> eth4(L2:0x88B5)\n");
